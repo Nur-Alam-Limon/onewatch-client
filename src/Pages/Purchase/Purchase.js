@@ -12,7 +12,7 @@ const Purchase = () => {
   const history = useHistory();
 
   useEffect(() => {
-    const url = `http://localhost:5000/purchase/${productid}`;
+    const url = `https://lit-escarpment-35115.herokuapp.com/purchase/${productid}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setPurchase(data));
@@ -37,7 +37,7 @@ const Purchase = () => {
       productStatus,
     };
 
-    fetch("http://localhost:5000/purchaseconfirm", {
+    fetch("https://lit-escarpment-35115.herokuapp.com/purchaseconfirm", {
       method: "POST",
       headers: {
         "content-type": "application/json",

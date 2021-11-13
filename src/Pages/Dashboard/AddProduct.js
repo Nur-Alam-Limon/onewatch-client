@@ -16,7 +16,7 @@ const AddProduct = () => {
     const img = imgRef.current.value;
     const newEvent = { name, description, price, img };
 
-    fetch("http://localhost:5000/addproduct", {
+    fetch("https://lit-escarpment-35115.herokuapp.com/addproduct", {
       method: "post",
       headers: {
         "content-type": "application/json",

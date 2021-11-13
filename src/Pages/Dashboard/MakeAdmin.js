@@ -10,7 +10,7 @@ const MakeAdmin = () => {
     const mail = mailRef.current.value;
     const newEvent = { email: mail };
 
-    fetch("http://localhost:5000/makeadmin", {
+    fetch("https://lit-escarpment-35115.herokuapp.com/makeadmin", {
       method: "put",
       headers: {
         "content-type": "application/json",

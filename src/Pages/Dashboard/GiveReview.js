@@ -16,7 +16,7 @@ const GiveReview = () => {
     const img = imgRef.current.value;
     const newEvent = { name, description, rating, img };
 
-    fetch("http://localhost:5000/addreview", {
+    fetch("https://lit-escarpment-35115.herokuapp.com/addreview", {
       method: "post",
       headers: {
         "content-type": "application/json",

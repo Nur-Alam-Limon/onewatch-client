@@ -9,7 +9,7 @@ const ManageAllOrders = () => {
   const [status, setStatus] = useState({});
 
   useEffect(() => {
-    const url = `http://localhost:5000/allorders`;
+    const url = `https://lit-escarpment-35115.herokuapp.com/allorders`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setAllOrders(data));
@@ -18,7 +18,7 @@ const ManageAllOrders = () => {
   const handleDeleteEvent = (id) => {
     const proceed = window.confirm("Sure to delete?");
     if (proceed) {
-      const url = `http://localhost:5000/delete/${id}`;
+      const url = `https://lit-escarpment-35115.herokuapp.com/delete/${id}`;
       fetch(url, {
         method: "DELETE",
       })
@@ -32,7 +32,7 @@ const ManageAllOrders = () => {
     const updateStatus = { status: status1 };
     setStatus(updateStatus);
 
-    const url = `http://localhost:5000/status/${id}`;
+    const url = `https://lit-escarpment-35115.herokuapp.com/status/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {
