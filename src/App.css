@@ -1,5 +1,29 @@
 .App {
   text-align: center;
+  font-family: monospace;
+}
+
+.text-custom {
+  color: #ffc914;
+}
+
+.text-heading {
+  color: #ffc914;
+  font-weight: 200;
+}
+
+.text-black {
+  color: #2e282a;
+}
+
+.bg-black {
+  background-color: #2e282a;
+}
+
+.button {
+  background-color: #ffc914;
+  border-radius: 50px;
+  padding: 2px 30px;
 }
 
 .App-logo {
