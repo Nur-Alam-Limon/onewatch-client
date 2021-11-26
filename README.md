@@ -6,6 +6,12 @@ OneWatch
 
 https://onewatch-c4f9e.web.app/
 
+#Credentials
+
+For admin login:
+admin@admin.com
+pass-123456
+
 # Description
 
 This is watch related website. It has following features:
