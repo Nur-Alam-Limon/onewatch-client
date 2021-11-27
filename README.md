@@ -6,9 +6,9 @@ OneWatch
 
 https://onewatch-c4f9e.web.app/
 
-#Credentials
+# Credentials
 
-For admin login:
+For Admin login:
 admin@admin.com
 pass-123456
 
