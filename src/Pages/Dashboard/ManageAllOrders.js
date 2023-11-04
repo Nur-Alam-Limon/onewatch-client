@@ -9,7 +9,7 @@ const ManageAllOrders = () => {
   const [status, setStatus] = useState({});
 
   useEffect(() => {
-    const url = `https://lit-escarpment-35115.herokuapp.com/allorders`;
+    const url = `https://onewatch-server.vercel.app/allorders`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setAllOrders(data));
@@ -18,7 +18,7 @@ const ManageAllOrders = () => {
   const handleDeleteEvent = (id) => {
     const proceed = window.confirm("Sure to delete?");
     if (proceed) {
-      const url = `https://lit-escarpment-35115.herokuapp.com/delete/${id}`;
+      const url = `https://onewatch-server.vercel.app/delete/${id}`;
       fetch(url, {
         method: "DELETE",
       })
@@ -32,7 +32,7 @@ const ManageAllOrders = () => {
     const updateStatus = { status: status1 };
     setStatus(updateStatus);
 
-    const url = `https://lit-escarpment-35115.herokuapp.com/status/${id}`;
+    const url = `https://onewatch-server.vercel.app/status/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {

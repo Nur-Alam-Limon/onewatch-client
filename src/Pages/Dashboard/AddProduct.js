@@ -16,7 +16,7 @@ const AddProduct = () => {
     const img = imgRef.current.value;
     const newEvent = { name, description, price, img };
 
-    fetch("https://lit-escarpment-35115.herokuapp.com/addproduct", {
+    fetch("https://onewatch-server.vercel.app/addproduct", {
       method: "post",
       headers: {
         "content-type": "application/json",

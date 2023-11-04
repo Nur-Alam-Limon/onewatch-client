@@ -12,7 +12,7 @@ const Purchase = () => {
   const history = useHistory();
 
   useEffect(() => {
-    const url = `https://lit-escarpment-35115.herokuapp.com/purchase/${productid}`;
+    const url = `https://onewatch-server.vercel.app/purchase/${productid}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setPurchase(data));
@@ -37,7 +37,7 @@ const Purchase = () => {
       productStatus,
     };
 
-    fetch("https://lit-escarpment-35115.herokuapp.com/purchaseconfirm", {
+    fetch("https://onewatch-server.vercel.app/purchaseconfirm", {
       method: "POST",
       headers: {
         "content-type": "application/json",

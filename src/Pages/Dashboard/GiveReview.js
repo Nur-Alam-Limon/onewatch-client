@@ -16,7 +16,7 @@ const GiveReview = () => {
     const img = imgRef.current.value;
     const newEvent = { name, description, rating, img };
 
-    fetch("https://lit-escarpment-35115.herokuapp.com/addreview", {
+    fetch("https://onewatch-server.vercel.app/addreview", {
       method: "post",
       headers: {
         "content-type": "application/json",

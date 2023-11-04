@@ -5,7 +5,7 @@ const Products = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("https://lit-escarpment-35115.herokuapp.com/products")
+    fetch("https://onewatch-server.vercel.app/products")
       .then((res) => res.json())
       .then((data) => setProducts(data.slice(0, 6)));
   });

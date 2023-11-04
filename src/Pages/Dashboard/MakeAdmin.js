@@ -10,7 +10,7 @@ const MakeAdmin = () => {
     const mail = mailRef.current.value;
     const newEvent = { email: mail };
 
-    fetch("https://lit-escarpment-35115.herokuapp.com/makeadmin", {
+    fetch("https://onewatch-server.vercel.app/makeadmin", {
       method: "put",
       headers: {
         "content-type": "application/json",

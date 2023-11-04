@@ -6,7 +6,7 @@ const Reviews = () => {
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
-    fetch("https://lit-escarpment-35115.herokuapp.com/reviews")
+    fetch("https://onewatch-server.vercel.app/reviews")
       .then((res) => res.json())
       .then((data) => setReviews(data));
   });

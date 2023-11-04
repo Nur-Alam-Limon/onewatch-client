@@ -7,7 +7,7 @@ const ManageProducts = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("https://lit-escarpment-35115.herokuapp.com/products")
+    fetch("https://onewatch-server.vercel.app/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   });
@@ -15,7 +15,7 @@ const ManageProducts = () => {
   const handleDeleteEvent = (id) => {
     const proceed = window.confirm("Sure to delete?");
     if (proceed) {
-      const url = `https://lit-escarpment-35115.herokuapp.com/products/delete/${id}`;
+      const url = `https://onewatch-server.vercel.app/products/delete/${id}`;
       fetch(url, {
         method: "DELETE",
       })
