@@ -10,7 +10,7 @@ const MakeAdmin = () => {
     const mail = mailRef.current.value;
     const newEvent = { email: mail };
 
-    fetch("https://onewatch-server.vercel.app/makeadmin", {
+    fetch("https://onewatch-server.onrender.com/makeadmin", {
       method: "put",
       headers: {
         "content-type": "application/json",

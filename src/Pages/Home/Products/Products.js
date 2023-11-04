@@ -5,9 +5,9 @@ const Products = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("https://onewatch-server.vercel.app/products")
+    fetch("https://onewatch-server.onrender.com/products")
       .then((res) => res.json())
-      .then((data) => setProducts(data.slice(0, 6)));
+      .then((data) => setProducts(data));
   });
   return (
     <div className="py-5">

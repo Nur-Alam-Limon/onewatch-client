@@ -16,7 +16,7 @@ const AddProduct = () => {
     const img = imgRef.current.value;
     const newEvent = { name, description, price, img };
 
-    fetch("https://onewatch-server.vercel.app/addproduct", {
+    fetch("https://onewatch-server.onrender.com/addproduct", {
       method: "post",
       headers: {
         "content-type": "application/json",

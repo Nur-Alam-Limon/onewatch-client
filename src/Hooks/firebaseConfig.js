@@ -69,7 +69,7 @@ const useFirebase = () => {
 
   const saveUser = (email, displayName) => {
     const user = { email, displayName };
-    fetch("https://onewatch-server.vercel.app/users", {
+    fetch("https://onewatch-server.onrender.com/users", {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -79,7 +79,7 @@ const useFirebase = () => {
   };
 
   useEffect(() => {
-    fetch(`https://onewatch-server.vercel.app/users/${user.email}`)
+    fetch(`https://onewatch-server.onrender.com/users/${user.email}`)
       .then((res) => res.json())
       .then((data) => setAdmin(data.admin));
   }, [user.email]);

@@ -10,7 +10,7 @@ const Product = (props) => {
     <div>
       <div className="col">
         <Card
-          style={{ width: "20rem", height: "430px" }}
+          style={{ width: "17rem", height: "430px" }}
           className="shadow-sm border-0"
         >
           <Card.Img

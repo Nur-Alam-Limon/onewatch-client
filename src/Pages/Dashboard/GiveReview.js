@@ -16,7 +16,7 @@ const GiveReview = () => {
     const img = imgRef.current.value;
     const newEvent = { name, description, rating, img };
 
-    fetch("https://onewatch-server.vercel.app/addreview", {
+    fetch("https://onewatch-server.onrender.com/addreview", {
       method: "post",
       headers: {
         "content-type": "application/json",

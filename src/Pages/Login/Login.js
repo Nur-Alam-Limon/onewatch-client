@@ -51,7 +51,7 @@ const Login = () => {
     e.target.value = "";
   };
   return (
-    <Row>
+    <div style={{display: 'flex', justifyContent: 'center', alignItems:'center'}}>
       <Col sm={12} md={7} className="mt-5">
         <h1 className="mx-auto w-50 text-heading mt-5">Login Form</h1>
         <br />
@@ -98,7 +98,7 @@ const Login = () => {
       <Col sm={12} md={5} className="d-flex align-items-center pb-3">
         <img src={loginImg} alt="" style={{ width: "100%" }} />
       </Col>
-    </Row>
+    </div>
   );
 };
 

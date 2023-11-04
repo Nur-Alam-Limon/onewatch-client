@@ -11,7 +11,7 @@ const MyOrders = () => {
   const { mail } = useParams();
 
   useEffect(() => {
-    const url = `https://onewatch-server.vercel.app/myorders/${mail}`;
+    const url = `https://onewatch-server.onrender.com/myorders/${mail}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setMyOrders(data));
@@ -20,7 +20,7 @@ const MyOrders = () => {
   const handleDeleteEvent = (id) => {
     const proceed = window.confirm("Sure to delete?");
     if (proceed) {
-      const url = `https://onewatch-server.vercel.app/delete/${id}`;
+      const url = `https://onewatch-server.onrender.com/delete/${id}`;
       fetch(url, {
         method: "DELETE",
       })

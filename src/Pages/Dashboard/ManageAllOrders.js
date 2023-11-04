@@ -9,7 +9,7 @@ const ManageAllOrders = () => {
   const [status, setStatus] = useState({});
 
   useEffect(() => {
-    const url = `https://onewatch-server.vercel.app/allorders`;
+    const url = `https://onewatch-server.onrender.com/allorders`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setAllOrders(data));
@@ -18,7 +18,7 @@ const ManageAllOrders = () => {
   const handleDeleteEvent = (id) => {
     const proceed = window.confirm("Sure to delete?");
     if (proceed) {
-      const url = `https://onewatch-server.vercel.app/delete/${id}`;
+      const url = `https://onewatch-server.onrender.com/delete/${id}`;
       fetch(url, {
         method: "DELETE",
       })
@@ -32,7 +32,7 @@ const ManageAllOrders = () => {
     const updateStatus = { status: status1 };
     setStatus(updateStatus);
 
-    const url = `https://onewatch-server.vercel.app/status/${id}`;
+    const url = `https://onewatch-server.onrender.com/status/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {
@@ -52,12 +52,12 @@ const ManageAllOrders = () => {
     return <Spinner animation="border" variant="primary"></Spinner>;
   }
   return (
-    <div style={{ minHeight: "100vh" }}>
+    <div style={{ minHeight: "100vh", paddingBottom: '150px' }}>
       <h1 className="text-heading py-5">Ordered Product</h1>
       <div className="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mx-lg-5 g-4 mx-3 pt-3">
         {allOrders.map((event) => (
           <div className="col">
-            <Card style={{ width: "20rem", height: "500px" }}>
+            <Card style={{ width: "18rem", height: "500px" }}>
               <Card.Img
                 variant="top"
                 src={event.productImg}

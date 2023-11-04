@@ -7,7 +7,7 @@ const ManageProducts = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("https://onewatch-server.vercel.app/products")
+    fetch("https://onewatch-server.onrender.com/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   });
@@ -15,7 +15,7 @@ const ManageProducts = () => {
   const handleDeleteEvent = (id) => {
     const proceed = window.confirm("Sure to delete?");
     if (proceed) {
-      const url = `https://onewatch-server.vercel.app/products/delete/${id}`;
+      const url = `https://onewatch-server.onrender.com/products/delete/${id}`;
       fetch(url, {
         method: "DELETE",
       })
@@ -31,7 +31,7 @@ const ManageProducts = () => {
         <div className="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mx-lg-5 g-4 mx-3 pt-3">
           {products.map((event) => (
             <div className="col">
-              <Card style={{ width: "20rem", height: "420px" }}>
+              <Card style={{ width: "18rem", height: "420px" }}>
                 <Card.Img
                   variant="top"
                   src={event.img}

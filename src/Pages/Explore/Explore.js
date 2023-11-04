@@ -5,7 +5,7 @@ const Explore = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("https://onewatch-server.vercel.app/products")
+    fetch("https://onewatch-server.onrender.com/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   });
